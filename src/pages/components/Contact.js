@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../index.scss';
+import styled, { css } from 'styled-components' 
 
 class Contact extends React.Component {
     constructor(props) {
@@ -51,18 +52,30 @@ class Contact extends React.Component {
 
                 <form>
                     <label>
-                        <input type="text" value={this.state.value} onChange={this.handleChange} />
+                        <input 
+                            value={this.state.value} onChange={this.handleChange}
+                            type="text"
+                            placeholder="Ваше ім'я"
+                        />
                     </label>
 
                     <label>
-                        <input type="text" value={this.state.value} onChange={this.handleChange} />
+                        <input 
+                            value={this.state.value} onChange={this.handleChange}
+                            type="text"
+                            placeholder="Номер телефону"
+                        />
                     </label>
 
                     <label>
-                        <input type="text" value={this.state.value} onChange={this.handleChange} />
+                        <input 
+                            value={this.state.value} onChange={this.handleChange}
+                            type="text"
+                            placeholder="E-mail"
+                        />
                     </label>
 
-                    <button onClick={this.handleChange}>
+                    <button primary onClick={this.handleChange}>
                         Підписатися
                     </button>
                 </form>
