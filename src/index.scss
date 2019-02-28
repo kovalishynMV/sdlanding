@@ -189,7 +189,7 @@ p{
   justify-content: row;
   margin-left: 15%;
   margin-right: 15%;
-  margin-top: 70px;
+  margin-top: 0;
   flex-wrap: wrap;
 }
 
@@ -199,6 +199,7 @@ p{
   width: 280px;
   height: 350px;
   border-radius: 8px;
+  margin-top: 50px;
   background-image: radial-gradient(circle at 50% 81%, rgba(105, 155, 21, 0.5), #82bb23), linear-gradient(to bottom, #82bb23, #82bb23);
   display: flex;
   align-items: flex-end;
@@ -216,6 +217,7 @@ p{
   width: 280px;
   height: 350px;
   border-radius: 8px;
+  margin-top: 50px;
   background-image: radial-gradient(circle at 50% 81%, rgba(45, 141, 198, 0.5), #2eaffb), linear-gradient(to bottom, #2eaffb, #2eaffb);
   display: flex;
   flex-direction: column;
@@ -243,6 +245,7 @@ p{
   width: 280px;
   height: 350px;
   border-radius: 8px;
+  margin-top: 50px;
   background-image: radial-gradient(circle at 50% 81%, rgba(142, 94, 173, 0.5), #aa7cc8), linear-gradient(to bottom, #aa7cc8, #aa7cc8);
   display: flex;
   align-items: flex-end;
@@ -344,4 +347,217 @@ form{
 input{
   margin-top: 15px;
   margin-bottom: 15px;
+}
+
+.card{
+  width: 360px;
+  height: 476px;
+  background-image: url(img/card1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media screen and (max-width: 1280px) {
+  .header__narval {
+    display: none;
+  }
+  .header__right {
+    display: none;
+  }
+
+  .header__left {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .header__text {
+    margin-left: 10%;
+    margin-right: 10%;
+    width: auto;
+
+    h4{
+      margin-bottom: 0;
+    }
+  }
+
+  .header__bg {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .logo {
+    justify-content: center;
+    margin-left: 0;
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .advantages__box{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px 30px 30px 30px;
+    margin-left: 10%;
+    margin-right: 10%;
+
+    h4{
+      width: auto;
+      padding-right: 0;
+      padding-bottom: 10px;
+    }
+    
+    .check{
+      margin-left:0;
+    }
+  }
+
+  .details__card_red{
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 50px;
+    width: 280px;
+    height: 350px;
+    border-radius: 8px;
+    background-image: radial-gradient(circle at 31% 76%, rgba(194, 47, 41, 0.26), #fc423b), linear-gradient(to bottom, #fc423b, #fc423b);
+    display: flex;
+    align-items: flex-end;
+  }
+  
+  .details__card_red{
+    p{
+      padding: 190px 40px 40px 40px;
+    }
+  }
+
+  .contact__main{
+    h4{
+      padding-left: 100px;
+      padding-right: 100px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header__left {
+    margin-top: 20%;
+    margin-bottom: 20%;
+  }
+
+  .details__cards{
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .details__card_green{
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+    margin-left: 0;
+    margin-right: 0;
+      p{
+        text-align: center;
+        padding-top: 40px;
+      }
+  }
+
+  .details__card_blue{
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+    margin-left: 0;
+    margin-right: 0;
+      p{
+        text-align: center;
+        padding-top: 40px;
+      }
+      h6{
+        text-align: center;
+      }
+  }
+
+  .details__card_purple{
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+    margin-left: 0;
+    margin-right: 0;
+    align-items: center;
+      p{
+        text-align: center;
+        padding-top: 40px;
+      }
+      h6{
+        text-align: center;
+      }
+  }
+
+  .details__card_yellow{
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+    margin-left: 0;
+    margin-right: 0;
+    align-items: flex-end;
+      p{
+        text-align: center;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        padding-left: 40px;
+        padding-right: 40px;
+        width: 100%;
+      }
+  }
+
+  .details__card_red{
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+    margin-left: 0;
+    margin-right: 0;
+    align-items: flex-end;
+      p{
+        text-align: center;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        padding-left: 40px;
+        padding-right: 40px;
+        width: 100%;
+      }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  h1{
+    font-size: 30px;
+  }
+
+  .advantages__headline{
+      margin-top: 50px;
+      margin-bottom: 30px;
+  }
+
+  .details__headline{
+    margin-top: 60px;
+  }
+
+  .contact__main{
+    margin-top: 100px;
+      h2{
+        font-size: 20px;
+        padding: 30px 30px 20px 30px;
+      }
+      h4{
+        font-size: 15px; 
+        padding: 0px 30px 20px 30px;
+      }
+  }
+
 }
