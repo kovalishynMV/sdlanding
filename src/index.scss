@@ -57,6 +57,28 @@ h4{
   color: $white;
 }
 
+h5{
+  font-family: GothamPro;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.43;
+  color: $white;
+  margin:0;
+}
+
+a{
+    font-family: GothamPro;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.43;
+    color: #2eaffb;
+    margin:0;
+}
+
 h6{
   opacity: 0.34;
   font-family: GothamPro;
@@ -81,6 +103,11 @@ p{
   letter-spacing: normal;
   color: $white;
   margin: 0;
+}
+
+label{
+  display: flex;
+  flex-direction: row;
 }
 
 .header__bg{
@@ -308,7 +335,7 @@ p{
 }
 
 .contact__main{
-  height: 567px;
+  height: auto;
   border-radius: 2px;
   background-color: #11369e;
   margin-left: 15%;
@@ -318,43 +345,63 @@ p{
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-}
-
-.contact__main{
-  h2{
-    color: $white;
-    padding-left: 100px;
-    padding-top: 100px;
-    margin: 0;
-    text-align: left;
-  }
-  h4{
-    color: $white;
-    padding-left: 100px;
-    text-align: left;
-    padding-top: 20px;
-    margin: 0;
-  }
+    h2{
+      color: $white;
+      padding-left: 100px;
+      padding-top: 100px;
+      margin: 0;
+      text-align: left;
+    }
+    h4{
+      color: $white;
+      padding-left: 100px;
+      padding-right: 100px;
+      text-align: left;
+      padding-top: 20px;
+      margin: 0;
+      padding-bottom: 20px;
+    }
 }
 
 form{
   margin: 0;
   padding-left: 100px;
-  padding-bottom: 70px;
+  padding-right: 100px;
+  padding-bottom: 30px;
   padding-top: 30px;
 }
 
 input{
-  margin-top: 15px;
-  margin-bottom: 15px;
+  width: 100%;
+  width: 230px;
+  height: 64px;
+  border-radius: 2px;
+  background-color: rgba(46, 175, 251, 0.1);
+  border: 0;
 }
-
 .card{
   width: 360px;
   height: 476px;
   background-image: url(img/card1.png);
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.contact__inputs{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 50px;
+}
+
+.mainButton{
+  width: 196px;
+  height: 64px;
+  border-radius: 2px;
+  border: solid 2px #2eaffb;
 }
 
 @media screen and (max-width: 1280px) {
@@ -442,6 +489,20 @@ input{
       padding-left: 100px;
       padding-right: 100px;
     }
+  }
+
+  .contact__inputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  input{
+    width: 100%;
+  }
+
+  button{
+    width: 100%;
   }
 }
 
@@ -531,6 +592,31 @@ input{
         padding-right: 40px;
         width: 100%;
       }
+  }
+
+  .contact__main{
+    margin-top: 100px;
+    height: auto;
+      h2{
+        font-size: 20px;
+        padding: 40px 40px 20px 40px;
+      }
+      h4{
+        font-size: 15px; 
+        padding: 0px 40px 40px 40px;
+      }
+  }
+
+  form{
+    margin: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 30px;
+    padding-top: 0px;
+  }
+
+  .contact__inputs{
+    padding: 0px 40px 40px 40px;
   }
 }
 

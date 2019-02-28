@@ -1,26 +1,17 @@
 import React from 'react';
 import '../../index.scss';
-import styled, { css } from 'styled-components' 
+import { render } from 'react-dom'
+import { Link } from 'react-router-dom'
+import Checkbox from './Checkbox'
+import Input from './Input'
 
 class Contact extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            conditions: true,
-        };
-    
-        this.handleInputChange = this.handleInputChange.bind(this);
-      }
-    
-      handleInputChange(event) {
-        const target = event.target;
-        const value = target.type === 'checkbox' ? target.checked : target.value;
-        const name = target.name;
-    
-        this.setState({
-          [name]: value
-        });
-      }
+    state = { checked: false }
+
+    handleCheckboxChange = event => {
+        this.setState({ checked: event.target.checked })
+    }
+
     render() {
         return (
             <div className="contact__main">
@@ -31,26 +22,24 @@ class Contact extends React.Component {
                 <h4>Залиште ваші контакти, і ми повідомимо, коли абонементи будуть готові!</h4>
 
                 <form>
-                    <label>
-                        Я ознайомлений і приймаю Умови користування сайтом та умови Політики конфіденційності
-                        <input
-                            name="conditions"
-                            type="checkbox"
-                            checked={this.state.conditions}
-                            onChange={this.handleInputChange} />
+                    <label style={{ paddingBottom: 20 }}>
+                        <Checkbox
+                            checked={this.state.checked}
+                            onChange={this.handleCheckboxChange}
+                        />
+                        <h5 style={{ marginLeft: 15 }}>Я ознайомлений і приймаю <a href=""> Умови користування сайтом </a> та <a href="">умови Політики конфіденційності</a> </h5>
                     </label>
-                    <br />
-                    <label>
-                        Я дозволяю обробку моїх персональних даних з метою отримання від StudyDive інформації про абонемент StudyDive.
-                        <input
-                            name="agreement"
-                            type="checkbox"
-                            checked={this.state.agreement}
-                            onChange={this.handleInputChange} />
+
+                    <label style={{ paddingBottom: 40 }}>
+                        <Checkbox
+                            checked={this.state.checked}
+                            onChange={this.handleCheckboxChange}
+                        />
+                        <h5 style={{ marginLeft: 15 }}>Я дозволяю обробку моїх персональних даних з метою отримання від StudyDive інформації про абонемент StudyDive.</h5>
                     </label>
                 </form>
 
-                <form>
+                <div className="contact__inputs" style={{ marginBottom: 40 }}>
                     <label>
                         <input 
                             value={this.state.value} onChange={this.handleChange}
@@ -75,10 +64,10 @@ class Contact extends React.Component {
                         />
                     </label>
 
-                    <button primary onClick={this.handleChange}>
+                    <button className="mainButton" onClick={this.handleChange}>
                         Підписатися
                     </button>
-                </form>
+                </div>
             </div>
         );
     }
