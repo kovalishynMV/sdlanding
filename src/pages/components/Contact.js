@@ -27,7 +27,7 @@ class Contact extends React.Component {
                             checked={this.state.checked}
                             onChange={this.handleCheckboxChange}
                         />
-                        <h5 style={{ marginLeft: 15 }}>Я ознайомлений і приймаю <a href=""> Умови користування сайтом </a> та <a href="">умови Політики конфіденційності</a> </h5>
+                        <h5 style={{ marginLeft: 15 }}>Я ознайомлений і приймаю <a href="https://studydive.com/ua/term-of-use" target="_blank"> Умови користування сайтом </a> та <a href="https://studydive.com/ua/privacy-policy" target="_blank">умови Політики конфіденційності</a> </h5>
                     </label>
 
                     <label style={{ paddingBottom: 40 }}>
